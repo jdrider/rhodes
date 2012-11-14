@@ -39,6 +39,7 @@ import com.rhomobile.rhodes.RhodesAppOptions;
 import com.rhomobile.rhodes.osfunctionality.AndroidFunctionalityManager;
 import com.rhomobile.rhodes.util.Utils;
 
+import android.R;
 import android.content.ContentValues;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
@@ -101,6 +102,9 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
 		
 		cameraButton = (ImageButton)findViewById(AndroidR.id.cameraButton);
 		cameraButton.setOnClickListener(this);
+		
+		ImageButton cancelButton = (ImageButton) findViewById(AndroidR.id.camera_cancelButton);
+		cancelButton.setOnClickListener(this);
 		
         myOrientationEventListener = new OrientationEventListener(this, SensorManager.SENSOR_DELAY_NORMAL)
         {
@@ -273,6 +277,10 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
 		if (v.getId() == AndroidR.id.cameraButton) {
 			takePictureWithAutofocus();
 			cameraButton.setVisibility(View.INVISIBLE);
+		}
+		else if(v.getId() == AndroidR.id.camera_cancelButton){
+			com.rhomobile.rhodes.camera.Camera.doCallback(callbackUrl, null, 0, 0, "");
+			finish();
 		}
 	}
 

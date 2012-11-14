@@ -62,6 +62,7 @@ public final class AndroidR {
     public static final class id {
         public static final int buttonLayout=R.id.buttonLayout;
         public static final int cameraButton=R.id.cameraButton;
+        public static final int camera_cancelButton = R.id.camera_cancelButton;
         public static final int cancelButton=R.id.cancelButton;
         public static final int excludeClasses=R.id.excludeClasses;
         public static final int filesList=R.id.filesList;
