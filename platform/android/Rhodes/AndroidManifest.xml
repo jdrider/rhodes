@@ -5,7 +5,8 @@
     android:versionCode="37"
     android:versionName="3.3.2">
     
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="8" 
+              android:targetSdkVersion="16"/>
     
     <application
         android:name="com.rhomobile.rhodes.RhodesApplication"
