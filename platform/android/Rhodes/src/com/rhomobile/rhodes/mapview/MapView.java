@@ -100,7 +100,7 @@ public class MapView extends BaseActivity implements MapTouch {
 	
 	private TouchHandler createTouchHandler() {
 		String className;
-		int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+		int sdkVersion = Build.VERSION.SDK_INT;
 		if (sdkVersion < Build.VERSION_CODES.ECLAIR)
 			className = "OneTouchHandler";
 		else

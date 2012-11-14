@@ -65,7 +65,7 @@ public class Phonebook {
 	
 	private ContactAccessor createAccessor() {
 		String className;
-		int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+		int sdkVersion = Build.VERSION.SDK_INT;
 		if (sdkVersion < Build.VERSION_CODES.ECLAIR)
 			className = "ContactAccessorOld";
 		else

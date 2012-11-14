@@ -35,7 +35,7 @@ private static AndroidFunctionality ourFunctionality = null;
 	
 	public static AndroidFunctionality getAndroidFunctionality() {
 		if (ourFunctionality == null) {
-			int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+			int sdkVersion = Build.VERSION.SDK_INT;
 			if (sdkVersion >= 10) {
 				ourFunctionality = new AndroidFunctionality10();
 			}

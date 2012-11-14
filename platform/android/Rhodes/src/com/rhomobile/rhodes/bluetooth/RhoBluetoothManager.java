@@ -77,7 +77,7 @@ public class RhoBluetoothManager {
 				public void run() {
 					RhoBluetoothManager.logi(TAG, "make IRhoBluetoothManager instance");
 					String className = "RhoBluetoothManagerNew";
-					int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+					int sdkVersion = Build.VERSION.SDK_INT;
 					if (sdkVersion < Build.VERSION_CODES.ECLAIR) {
 						RhoBluetoothManager.logi(TAG, "sharedInstance - old version of System - NO Bluetooth !");
 						className = "RhoBluetoothManagerOld";

@@ -54,7 +54,7 @@ public class Camera {
 	public static CameraService getCameraService() {
 		if (ourCameraService == null) {
 			if (Capabilities.CAMERA_ENABLED) {
-				int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+				int sdkVersion = Build.VERSION.SDK_INT;
 				if (sdkVersion >= Build.VERSION_CODES.GINGERBREAD) {
 					ourCameraService = new CameraNewService();
 				}

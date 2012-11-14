@@ -43,7 +43,7 @@ public class PushService {
 	}
 	
 	private static boolean isOsVersionEnough() {
-		int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+		int sdkVersion = Build.VERSION.SDK_INT;
 		return sdkVersion >= Build.VERSION_CODES.FROYO;
 	}
 	

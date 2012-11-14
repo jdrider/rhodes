@@ -35,7 +35,7 @@ public class GoogleWebView implements WebView {
     private static void initWebStuff(Activity activity) {
         String ccName;
         String wsName;
-        int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+        int sdkVersion = Build.VERSION.SDK_INT;
         if (sdkVersion < Build.VERSION_CODES.ECLAIR_MR1) {
             ccName = "ChromeClientOld";
             wsName = "RhoWebSettingsOld";
