@@ -29,8 +29,6 @@ package com.rhomobile.rhodes.camera;
 import java.util.Iterator;
 import java.util.List;
 
-import com.rhomobile.rhodes.camera.CameraService.Size;
-
 import android.hardware.Camera;
 
 

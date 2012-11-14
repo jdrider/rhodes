@@ -30,7 +30,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import android.hardware.Camera;
-import android.hardware.Camera.Size;
 
 
 class CameraSemiService implements CameraService {

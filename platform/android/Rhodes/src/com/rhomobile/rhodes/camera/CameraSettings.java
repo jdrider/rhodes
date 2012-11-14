@@ -28,9 +28,6 @@ package com.rhomobile.rhodes.camera;
 
 import java.io.Serializable;
 import java.util.Map;
-import java.util.Vector;
-
-import android.graphics.Color;
 
 
 class CameraSettings implements Serializable {

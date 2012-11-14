@@ -28,7 +28,6 @@ package com.rhomobile.rhodes.webview;
 
 import com.rhomobile.rhodes.RhoConf;
 
-import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 

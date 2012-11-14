@@ -29,9 +29,6 @@ package com.rhomobile.rhodes.camera;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-
 import com.rhomobile.rhodes.AndroidR;
 import com.rhomobile.rhodes.Logger;
 import com.rhomobile.rhodes.BaseActivity;
@@ -39,14 +36,11 @@ import com.rhomobile.rhodes.RhodesAppOptions;
 import com.rhomobile.rhodes.osfunctionality.AndroidFunctionalityManager;
 import com.rhomobile.rhodes.util.Utils;
 
-import android.R;
 import android.content.ContentValues;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
-import android.hardware.Camera.Size;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore.Images.Media;
 import android.view.KeyEvent;

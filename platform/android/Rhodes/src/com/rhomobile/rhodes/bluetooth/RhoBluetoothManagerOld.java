@@ -27,7 +27,6 @@
 package com.rhomobile.rhodes.bluetooth;
 
 import android.content.Intent;
-import android.util.Log;
 
 public class RhoBluetoothManagerOld implements IRhoBluetoothManager {
 

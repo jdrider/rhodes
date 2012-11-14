@@ -38,7 +38,6 @@ import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 import com.rhomobile.rhodes.file.RhoFileApi;
-import com.rhomobile.rhodes.util.PerformOnUiThread;
 
 public class AnnotationsOverlay extends ItemizedOverlay<OverlayItem> {
 	

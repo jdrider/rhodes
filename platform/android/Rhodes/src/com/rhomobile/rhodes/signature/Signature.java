@@ -28,8 +28,6 @@ package com.rhomobile.rhodes.signature;
 
 import java.io.File;
 import java.util.Map;
-import java.util.Vector;
-
 import android.content.Intent;
 
 import com.rhomobile.rhodes.Logger;

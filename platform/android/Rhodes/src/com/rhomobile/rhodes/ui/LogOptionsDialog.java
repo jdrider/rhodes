@@ -38,7 +38,6 @@ import android.widget.Spinner;
 
 import com.rhomobile.rhodes.AndroidR;
 import com.rhomobile.rhodes.RhoLogConf;
-import com.rhomobile.rhodes.RhodesService;
 
 public class LogOptionsDialog extends Dialog implements OnClickListener {
 

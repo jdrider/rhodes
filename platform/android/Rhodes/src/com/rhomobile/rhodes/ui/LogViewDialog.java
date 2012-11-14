@@ -27,8 +27,6 @@ package com.rhomobile.rhodes.ui;
 
 import com.rhomobile.rhodes.AndroidR;
 import com.rhomobile.rhodes.RhoLogConf;
-import com.rhomobile.rhodes.RhodesService;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;

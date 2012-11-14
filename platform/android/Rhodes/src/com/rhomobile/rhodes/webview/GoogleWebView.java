@@ -5,7 +5,6 @@ import java.lang.reflect.Constructor;
 import com.rhomobile.rhodes.RhodesActivity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Build;
 import android.view.View;
 import android.webkit.WebChromeClient;

@@ -26,7 +26,6 @@
 
 package com.rhomobile.rhodes.util;
 
-import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;

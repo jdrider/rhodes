@@ -28,8 +28,6 @@ package com.rhomobile.rhodes.bluetooth;
 
 import android.content.Intent;
 import android.os.Build;
-import android.util.Log;
-
 import com.rhomobile.rhodes.Logger;
 import com.rhomobile.rhodes.util.PerformOnUiThread;
 

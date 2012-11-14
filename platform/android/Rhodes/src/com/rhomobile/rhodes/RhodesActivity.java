@@ -26,7 +26,6 @@
 
 package com.rhomobile.rhodes;
 
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
@@ -46,13 +45,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.WebView;
 
 public class RhodesActivity extends BaseActivity {
 	
