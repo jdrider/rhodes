@@ -27,14 +27,15 @@
 package com.rhomobile.rhodes;
 
 import android.os.SystemClock;
-import android.util.Config;
 
 public class HttpLog {
 	private final static String LOGTAG = "http";
 
 	//private static final boolean DEBUG = false;
 	//public static final boolean LOGV = DEBUG ? Config.LOGD : Config.LOGV;
-	public static final boolean LOGV = Config.LOGV;
+	
+	//public static final boolean LOGV = Config.LOGV;  
+	public static final boolean LOGV = false;  //Config.LOGV was deprecated and always returned false so just have a boolean that is false.
 
 	static void v(String logMe) {
 		Logger.T(LOGTAG, SystemClock.uptimeMillis() + " "
