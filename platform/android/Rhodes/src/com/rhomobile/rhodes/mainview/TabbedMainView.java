@@ -486,23 +486,23 @@ public class TabbedMainView implements MainView {
 		TabHost.LayoutParams lpt = null;
 		if (place_tabs_bottom) {
 			frame.setId(android.R.id.tabcontent);
-			lpf = new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT,
-					LayoutParams.FILL_PARENT, Gravity.TOP);
+			lpf = new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,
+					LayoutParams.MATCH_PARENT, Gravity.TOP);
 			host.addView(frame, lpf);
 
-			lpt = new TabHost.LayoutParams(LayoutParams.FILL_PARENT,
+			lpt = new TabHost.LayoutParams(LayoutParams.MATCH_PARENT,
 					LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
 			host.addView(tabWidget, lpt);
 		}
 		else {
-			lpt = new TabHost.LayoutParams(LayoutParams.FILL_PARENT,
+			lpt = new TabHost.LayoutParams(LayoutParams.MATCH_PARENT,
 					LayoutParams.WRAP_CONTENT, Gravity.TOP);
 			host.addView(tabWidget, lpt);
 
 			frame = new FrameLayout(ctx);
 			frame.setId(android.R.id.tabcontent);
-			lpf = new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT,
-					LayoutParams.FILL_PARENT, Gravity.BOTTOM);
+			lpf = new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,
+					LayoutParams.MATCH_PARENT, Gravity.BOTTOM);
 			host.addView(frame, lpf);
 		}
 		
