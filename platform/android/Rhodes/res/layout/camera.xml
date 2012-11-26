@@ -8,19 +8,20 @@
         android:id="@+id/surface"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1" >
+        android:orientation="vertical">
     </SurfaceView>
 
     <ImageButton
         android:id="@+id/cameraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|right"
+        android:layout_gravity="bottom|right"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:clickable="true"
+        android:contentDescription="@string/takePicture"
         android:src="@drawable/camera" >
     </ImageButton>
     
@@ -28,12 +29,13 @@
         android:id="@+id/camera_cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|left"
+        android:layout_gravity="bottom|left"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:clickable="true"
+        android:contentDescription="@string/cancel"
         android:src="@drawable/cancel_button">
     </ImageButton>
 
