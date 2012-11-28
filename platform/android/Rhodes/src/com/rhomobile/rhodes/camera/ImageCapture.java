@@ -37,6 +37,7 @@ import com.rhomobile.rhodes.osfunctionality.AndroidFunctionalityManager;
 import com.rhomobile.rhodes.util.Utils;
 
 import android.content.ContentValues;
+import android.content.pm.ActivityInfo;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
@@ -125,7 +126,9 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
         {
          	Logger.I(TAG, "orientation detect is not worked !!!");
            myOrientationEventListener = null;
-        }		
+        }
+                
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 	}
 
 	@Override
@@ -247,6 +250,7 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
 	            	
 	            }
 			}
+			
 			camera.setParameters(p);
 			camera.setPreviewDisplay(holder);
 			camera.startPreview();
