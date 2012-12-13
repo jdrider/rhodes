@@ -26,6 +26,7 @@
 
 package com.rhomobile.rhodes.mapview;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -33,6 +34,7 @@ import android.util.DisplayMetrics;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
+import com.rhomobile.rhodes.RhodesActivity;
 import com.rhomobile.rhodes.WebView;
 import com.rhomobile.rhodes.util.Utils;
 
@@ -101,13 +103,15 @@ public class CalloutOverlay extends ItemizedOverlay<OverlayItem> {
 		Annotation ann = mSelectedAnnotation;
 		OverlayItem item = null;
 		
+		Context ctx = RhodesActivity.getContext();
+		
 		if (ann != null) {
 			GeoPoint pnt = new GeoPoint((int)(ann.latitude*1000000), (int)(ann.longitude*1000000));
 			item = new OverlayItem(pnt, ann.title, ann.subtitle);
 	
 			Bitmap bitmap = mCallout.getResultBitmap();
 			bitmap.setDensity(DisplayMetrics.DENSITY_MEDIUM);
-			BitmapDrawable bd = new BitmapDrawable(bitmap);
+			BitmapDrawable bd = new BitmapDrawable(ctx.getResources(), bitmap);
 			//bd.setTargetDensity(DisplayMetrics.DENSITY_MEDIUM);
 			bd.setVisible(true, true);
 			bd.setBounds(	ann.callout_x_offset + mCallout.getXOffset(), 
@@ -123,7 +127,7 @@ public class CalloutOverlay extends ItemizedOverlay<OverlayItem> {
 			Bitmap bm = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
 			bm.eraseColor(0);
 			bm.setDensity(DisplayMetrics.DENSITY_MEDIUM);
-			BitmapDrawable bd = new BitmapDrawable(bm);
+			BitmapDrawable bd = new BitmapDrawable(ctx.getResources(), bm);
 			bd.setVisible(true, true);
 			bd.setBounds(	0, 
 							0, 

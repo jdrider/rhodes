@@ -369,7 +369,7 @@ public class SimpleMainView implements MainView {
 			if (bitmap == null)
 				throw new IllegalArgumentException("Can't find icon: " + iconPath);
 			bitmap.setDensity(DisplayMetrics.DENSITY_MEDIUM);
-			icon = new BitmapDrawable(bitmap);
+			icon = new BitmapDrawable(ctx.getResources(), bitmap);
 		}
 		
 		if (icon == null) {

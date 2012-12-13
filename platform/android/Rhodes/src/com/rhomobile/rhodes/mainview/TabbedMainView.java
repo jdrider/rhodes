@@ -600,7 +600,7 @@ public class TabbedMainView implements MainView {
 				
 				if (bitmap != null)
 					bitmap.setDensity(DisplayMetrics.DENSITY_MEDIUM);//Bitmap.DENSITY_NONE);
-					drawable = new BitmapDrawable(bitmap);
+					drawable = new BitmapDrawable(ctx.getResources(), bitmap);
 					drawable.setTargetDensity(metrics);
 			}
 			if (drawable == null)

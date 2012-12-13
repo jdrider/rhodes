@@ -179,7 +179,7 @@ public class PopupActivity extends BaseActivity {
 				String iconPath = RhoFileApi.normalizePath("apps/" + iconName);
 				Bitmap bitmap = BitmapFactory.decodeStream(RhoFileApi.open(iconPath));
 				if (bitmap != null)
-					icon = new BitmapDrawable(bitmap);
+					icon = new BitmapDrawable(getResources(), bitmap);
 			}
 		}
 		

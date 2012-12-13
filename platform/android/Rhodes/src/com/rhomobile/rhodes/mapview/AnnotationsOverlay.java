@@ -37,6 +37,7 @@ import android.util.DisplayMetrics;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
+import com.rhomobile.rhodes.RhodesActivity;
 import com.rhomobile.rhodes.file.RhoFileApi;
 
 public class AnnotationsOverlay extends ItemizedOverlay<OverlayItem> {
@@ -89,7 +90,7 @@ public class AnnotationsOverlay extends ItemizedOverlay<OverlayItem> {
 				//Utils.platformLog(TAG, "$$$$$$$$$$$$    Bitmap is ["+imagePath+"]");
 				//Utils.platformLog(TAG, "$$$$$$$$$$$$           is ["+String.valueOf(bitmap.getWidth())+"x"+String.valueOf(bitmap.getHeight())+"]");
 				bitmap.setDensity(myDensity);//DisplayMetrics.DENSITY_MEDIUM);
-				BitmapDrawable bd = new BitmapDrawable(bitmap);
+				BitmapDrawable bd = new BitmapDrawable(RhodesActivity.getContext().getResources(), bitmap);
 				//bd.setTargetDensity(DisplayMetrics.DENSITY_MEDIUM);
 				bd.setVisible(true, true);
 				
