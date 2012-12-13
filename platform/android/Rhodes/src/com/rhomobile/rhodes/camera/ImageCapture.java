@@ -191,7 +191,7 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
 		Logger.D(TAG, "surfaceCreated");
 		try {
 			
-			if (mSettings.getCameraType() == mSettings.CAMERA_TYPE_FRONT) {
+			if (mSettings.getCameraType() == CameraSettings.CAMERA_TYPE_FRONT) {
 				camera = com.rhomobile.rhodes.camera.Camera.getCameraService().getFrontCamera();
 			}
 			else {
@@ -242,7 +242,7 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
 	    				p.setPictureSize(mSettings.getWidth(), mSettings.getHeight());
 	    			}
 	    		}
-	            if (mSettings.getColorModel() == mSettings.CAMERA_COLOR_MODEL_GRAYSCALE) {
+	            if (mSettings.getColorModel() == CameraSettings.CAMERA_COLOR_MODEL_GRAYSCALE) {
 	            	p.set("effect", Camera.Parameters.EFFECT_MONO);//p.setColorEffect(Camera.Parameters.EFFECT_MONO);
 	            }
 	            if (mSettings.getFlashMode() != null) {
@@ -415,7 +415,7 @@ public class ImageCapture extends BaseActivity implements SurfaceHolder.Callback
     			}
             }
             if (mSettings != null) {
-	            if (mSettings.getColorModel() == mSettings.CAMERA_COLOR_MODEL_GRAYSCALE) {
+	            if (mSettings.getColorModel() == CameraSettings.CAMERA_COLOR_MODEL_GRAYSCALE) {
 	            	parameters.set("effect", Camera.Parameters.EFFECT_MONO);//setColorEffect(Camera.Parameters.EFFECT_MONO);
 	            }
 	            if (mSettings.getFlashMode() != null) {
