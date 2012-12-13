@@ -90,6 +90,7 @@ public class Signature {
 			int bgColor = 0xFFFFFFFF;
 			
 			if (params instanceof Map<?,?>) {
+				@SuppressWarnings("unchecked")
 				Map<Object,Object> settings = (Map<Object,Object>)params;
 				
 				Object imgFrmtObj = settings.get("imageFormat");

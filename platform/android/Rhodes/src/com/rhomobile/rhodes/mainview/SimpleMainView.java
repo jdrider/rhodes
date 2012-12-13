@@ -529,7 +529,8 @@ public class SimpleMainView implements MainView {
 		if (webView == null) {
 	        if (Capabilities.WEBKIT_BROWSER_ENABLED) {
 	            try {
-	                Class<? extends WebView> viewClass = (Class<? extends WebView>)Class.forName("com.rhomobile.rhodes.webview.EkiohWebView");
+	                @SuppressWarnings("unchecked")
+					Class<? extends WebView> viewClass = (Class<? extends WebView>)Class.forName("com.rhomobile.rhodes.webview.EkiohWebView");
 	                Constructor<? extends WebView> viewCtor = viewClass.getConstructor(Activity.class);
 	                webView = viewCtor.newInstance(activity);
 	            } catch (Throwable e) {

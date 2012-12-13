@@ -55,6 +55,7 @@ class CameraSettings implements Serializable {
 		
 		if (obj != null) {
 			if (obj instanceof Map<?,?>) {
+				@SuppressWarnings("unchecked")
 				Map<Object,Object> settings = (Map<Object,Object>)obj;
 
 				Object typeObj = settings.get("camera_type");
