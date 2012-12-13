@@ -50,7 +50,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class FileList extends BaseActivity implements OnClickListener{
@@ -107,8 +106,8 @@ public class FileList extends BaseActivity implements OnClickListener{
 		Button okButton = (Button) findViewById(AndroidR.id.okButton);
 		Button cancelButton = (Button) findViewById(AndroidR.id.cancelButton);
 
-		TextView lookIn = (TextView) findViewById(AndroidR.id.lookIn);
-		lookIn.setText("Look In: Gallery");
+		//TextView lookIn = (TextView) findViewById(AndroidR.id.lookIn);
+		//lookIn.setText("Look In: Gallery");
 
 		okButton.setOnClickListener(this);
 		cancelButton.setOnClickListener(this);

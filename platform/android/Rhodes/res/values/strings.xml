@@ -14,7 +14,7 @@
     <string name="logoptions">Logging Options</string>
     <string name="no_files">This directory is empty</string>
     <string name="to_top">..</string>
-    <string name="about_rhodes">Rhodes Version 1.0.0\n\nAuthor: Rhomobile\n\nSupport: all@rhomobile.com\n\n&#169; Copyright &#169; 2008 Rhomobile. All rights reserved.</string>
+    <string name="about_rhodes">Rhodes Version 3.3.2\n\nAuthor: Rhomobile\n\nSupport: all@rhomobile.com\n\n&#169; Copyright &#169; 2008 Rhomobile. All rights reserved.</string>
     <string name="ok">   OK   </string>
     <string name="cancel">Cancel</string>
     <color name="sig_bkgColor">#888888</color>
@@ -28,4 +28,7 @@
     <string name="title_other_devices">Other Available Devices</string>
     <string name="button_scan">Scan for devices</string>
     <string name="takePicture">Take Picture</string>
+    <string name="cameraDirectory">Look In: Gallery</string>
+    <string name="imagePreview">Image Preview</string>
+    <string name="open">Open</string>
 </resources>
