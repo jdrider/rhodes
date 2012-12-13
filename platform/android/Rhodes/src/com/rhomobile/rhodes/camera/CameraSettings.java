@@ -32,6 +32,9 @@ import java.util.Map;
 
 class CameraSettings implements Serializable {
 
+	
+	private static final long serialVersionUID = 1L;
+	
 	public static final int CAMERA_TYPE_MAIN = 1;
 	public static final int CAMERA_TYPE_FRONT = 2;
 
