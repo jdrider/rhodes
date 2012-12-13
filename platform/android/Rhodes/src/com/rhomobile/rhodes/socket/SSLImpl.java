@@ -52,7 +52,7 @@ public class SSLImpl {
 	private SSLSocket sock;
 
     //Used from jni
-    @SuppressWarnings("unused")
+    //@SuppressWarnings("unused")
     private int sockfd;
 
 	private InputStream is;

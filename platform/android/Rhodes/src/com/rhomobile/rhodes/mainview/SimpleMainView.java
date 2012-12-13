@@ -67,7 +67,7 @@ public class SimpleMainView implements MainView {
 	private final static String TAG = "SimpleMainView";	
 	
 	private static final int WRAP_CONTENT = ViewGroup.LayoutParams.WRAP_CONTENT;
-	private static final int FILL_PARENT = ViewGroup.LayoutParams.FILL_PARENT;
+	private static final int FILL_PARENT = ViewGroup.LayoutParams.MATCH_PARENT;
 	
 	private class ActionBack implements View.OnClickListener {
 		public void onClick(View v) {

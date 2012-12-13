@@ -136,7 +136,7 @@ public class GoogleMapView extends MapActivity {
 		getWindow().setFlags(RhodesService.WINDOW_FLAGS, RhodesService.WINDOW_MASK);
 		
 		RelativeLayout layout = new RelativeLayout(this);
-		setContentView(layout, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+		setContentView(layout, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		
 		// Extrace parameters
 		//Bundle extras = getIntent().getExtras();

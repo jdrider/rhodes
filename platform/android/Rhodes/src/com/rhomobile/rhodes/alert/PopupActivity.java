@@ -208,7 +208,7 @@ public class PopupActivity extends BaseActivity {
 		
 		LinearLayout main = new LinearLayout(ctx);
 		main.setOrientation(LinearLayout.VERTICAL);
-		main.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.FILL_PARENT));
+		main.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		main.setPadding(10, nTopPadding, 10, 10);
 		
 		LinearLayout top = new LinearLayout(ctx);
