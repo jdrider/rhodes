@@ -1620,6 +1620,10 @@ namespace "device" do
 
       puts "Signing APK file"
       args = []
+	  args << "-sigalg"
+	  args << "MD5withRSA"
+	  args << "-digestalg"
+	  args << "SHA1"
       args << "-verbose"
       args << "-keystore"
       args << $keystore
