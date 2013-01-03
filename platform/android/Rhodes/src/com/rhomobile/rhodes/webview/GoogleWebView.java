@@ -80,7 +80,8 @@ public class GoogleWebView implements WebView {
 
     @Override
     public boolean canGoBack() {
-        return mWebView.canGoBack();
+        //return mWebView.canGoBack();
+		return false;  //Disable the back button.  App will close when back button is pressed.
     }
 
     @Override
