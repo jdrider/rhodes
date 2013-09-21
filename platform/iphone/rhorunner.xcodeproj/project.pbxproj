@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		05377D120E74D7D7003B8BD1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05377D110E74D7D7003B8BD1 /* CoreFoundation.framework */; };
+		1237EE8217EA86DB00FFFF03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1237EE7E17EA86DB00FFFF03 /* Default-568h@2x.png */; };
+		1237EE8317EA86DB00FFFF03 /* icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 1237EE7F17EA86DB00FFFF03 /* icon76.png */; };
+		1237EE8417EA86DB00FFFF03 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1237EE8017EA86DB00FFFF03 /* icon120.png */; };
+		1237EE8517EA86DB00FFFF03 /* icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 1237EE8117EA86DB00FFFF03 /* icon152.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -170,6 +174,10 @@
 
 /* Begin PBXFileReference section */
 		05377D110E74D7D7003B8BD1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		1237EE7E17EA86DB00FFFF03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1237EE7F17EA86DB00FFFF03 /* icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon76.png; sourceTree = "<group>"; };
+		1237EE8017EA86DB00FFFF03 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		1237EE8117EA86DB00FFFF03 /* icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon152.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* rhorunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rhorunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -710,6 +718,10 @@
 		FA52317212E750F300AB55CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1237EE7E17EA86DB00FFFF03 /* Default-568h@2x.png */,
+				1237EE7F17EA86DB00FFFF03 /* icon76.png */,
+				1237EE8017EA86DB00FFFF03 /* icon120.png */,
+				1237EE8117EA86DB00FFFF03 /* icon152.png */,
 				FA52330012E9204300AB55CC /* BluePushpin@2x.png */,
 				FA52317312E7511700AB55CC /* BluePushpin.png */,
 				FA52317412E7511700AB55CC /* esri.png */,
@@ -875,6 +887,10 @@
 				FA52317B12E7511700AB55CC /* esri.png in Resources */,
 				FA52317C12E7511700AB55CC /* esri@2x.png in Resources */,
 				FA52330112E9204300AB55CC /* BluePushpin@2x.png in Resources */,
+				1237EE8217EA86DB00FFFF03 /* Default-568h@2x.png in Resources */,
+				1237EE8317EA86DB00FFFF03 /* icon76.png in Resources */,
+				1237EE8417EA86DB00FFFF03 /* icon120.png in Resources */,
+				1237EE8517EA86DB00FFFF03 /* icon152.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,10 +1056,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1078,15 +1091,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -1160,10 +1166,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1186,6 +1189,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../shared/ruby/iphone ../shared/ruby/include ../shared/curl/include ../shared/ ../shared/syncengine ../shared/logging ../shared/common rhoextlib";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s";
 			};
 			name = Distribution;
 		};
