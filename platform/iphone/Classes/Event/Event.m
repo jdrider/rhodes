@@ -144,11 +144,27 @@ static VALUE eventToRuby(EKEvent *event)
         const char *notes = [event.notes UTF8String];
         rb_hash_aset(rEvent, rb_str_new2(RUBY_EV_NOTES), rb_str_new2(notes));
     }
+    EKRecurrenceRule* rule = nil;
+#ifdef __IPHONE_5_0
+    if ([event respondsToSelector:@selector(hasRecurrenceRules)]) {
+        if ([event hasRecurrenceRules]) {
+            if (event.recurrenceRules.count > 0) {
+                // get first rule
+                rule = [event.recurrenceRules objectAtIndex:0];
+            }
+        }
+    }
+    else {
+        rule = [event recurrenceRule];
+    }
+#else
+    rule = [event recurrenceRule];
+#endif
     
-    if (event.recurrenceRule) {
+    if (rule != nil) {
         VALUE rRecurrence = rb_hash_new();
         const char *s;
-        switch (event.recurrenceRule.frequency) {
+        switch (rule.frequency) {
             case EKRecurrenceFrequencyDaily: s = RUBY_EV_RECURRENCE_FREQUENCY_DAILY; break;
             case EKRecurrenceFrequencyWeekly: s = RUBY_EV_RECURRENCE_FREQUENCY_WEEKLY; break;
             case EKRecurrenceFrequencyMonthly: s = RUBY_EV_RECURRENCE_FREQUENCY_MONTHLY; break;
@@ -157,16 +173,16 @@ static VALUE eventToRuby(EKEvent *event)
         }
         rb_hash_aset(rRecurrence, rb_str_new2(RUBY_EV_RECURRENCE_FREQUENCY), rb_str_new2(s));
         
-        int interval = event.recurrenceRule.interval;
+        int interval = rule.interval;
         rb_hash_aset(rRecurrence, rb_str_new2(RUBY_EV_RECURRENCE_INTERVAL), INT2FIX(interval));
         
-        if (event.recurrenceRule.recurrenceEnd != nil) {
-            NSDate* endDate = event.recurrenceRule.recurrenceEnd.endDate;
+        if (rule.recurrenceEnd != nil) {
+            NSDate* endDate = rule.recurrenceEnd.endDate;
             if (endDate != nil) {
                 rb_hash_aset(rRecurrence, rb_str_new2(RUBY_EV_RECURRENCE_END), dateToRuby(endDate));
                 [endDate release];
             } else {
-                int count = event.recurrenceRule.recurrenceEnd.occurrenceCount;
+                int count = rule.recurrenceEnd.occurrenceCount;
                 rb_hash_aset(rRecurrence, rb_str_new2(RUBY_EV_RECURRENCE_COUNT), INT2FIX(count));
             }
         }
@@ -328,7 +344,22 @@ VALUE event_fetch(VALUE rParams)
     
     for (int i = 0, lim = [events count]; i != lim; ++i) {
         EKEvent *event = [events objectAtIndex:i];
-        if (!include_repeating && event.recurrenceRule)
+        BOOL hasRecurRules = NO;
+        
+#ifdef __IPHONE_5_0
+        if ([event respondsToSelector:@selector(hasRecurrenceRules)]) {
+            if ([event hasRecurrenceRules]) {
+                hasRecurRules = YES;
+            }
+        }
+        else {
+            hasRecurRules = [event recurrenceRule] != nil;
+        }
+#else
+        hasRecurRules = [event recurrenceRule] != nil;
+#endif
+        
+        if (!include_repeating && hasRecurRules)
             continue;
         VALUE rEvent = eventToRuby(event);
         rho_ruby_add_to_array(ret, rEvent);
