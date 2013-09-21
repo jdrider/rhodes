@@ -128,7 +128,7 @@ def set_app_url_scheme(newname)
   return ret_value
 end
 
-BAKUP_FILES = ['rhorunner.xcodeproj', 'Entitlements.plist', 'icon.png', 'icon114.png', 'icon57.png', 'icon72.png', 'Info.plist']
+BAKUP_FILES = ['rhorunner.xcodeproj', 'Entitlements.plist', 'icon.png', 'icon114.png', 'icon57.png', 'icon72.png', 'icon152.png', 'icon120.png', 'icon76.png', 'icon144.png', 'Info.plist']
 CLEAR_FILES = ['Default.png', 'Default@2x.png', 'Default-Portrait.png', 'Default-PortraitUpsideDown.png', 'Default-Landscape.png', 'Default-LadscapeLeft.png', 'Default-LandscapeRight.png']
 
 def make_project_bakup
@@ -280,7 +280,7 @@ def prepare_production_plist (app_path, app_name)
     fAlx.close()
 end
 
-ICONS = [['icon', 'icon57'], ['icon57','icon57'], ['icon72','icon72'], ['icon114','icon114']]
+ICONS = [['icon', 'icon57'], ['icon57','icon57'], ['icon72','icon72'], ['icon114','icon114'], ['icon152','icon152'], ['icon120', 'icon120'], ['icon76', 'icon76'], ['icon144','icon144']]
 
 def copy_all_icons_to_production_folder
   ICONS.each do |pair|
@@ -474,12 +474,13 @@ namespace "config" do
     $excludelib = ['**/builtinME.rb','**/ServeME.rb','**/dateME.rb','**/rationalME.rb']
     $tmpdir =  $bindir +"/tmp"
 
-    $devroot = '/Developer' if $devroot.nil?
+    #$devroot = '/Developer' if $devroot.nil?
+    $devroot = '/Applications/Xcode.app/Contents' if $devroot.nil?
 
-    $xcodebuild = $devroot + "/usr/bin/xcodebuild"
+    $xcodebuild = $devroot + "/Developer/usr/bin/xcodebuild"
 
     $homedir = ENV['HOME']
-    $simdir = "#{$homedir}/Library/Application Support/iPhone Simulator/"
+    $simdir = "#{$homedir}/Applications/Xcode.app/Contents/Applications/iPhone Simulator/"
     $sim = $devroot + "/Platforms/iPhoneSimulator.platform/Developer/Applications"
     $guid = `uuidgen`.strip
     $applog = File.join($homedir,$app_config["applog"]) if $app_config["applog"] 
