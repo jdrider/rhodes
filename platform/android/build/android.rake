@@ -136,7 +136,8 @@ def set_app_name_android(newname)
   doc.elements["resources/string[@name='app_name']"].text = newname
   File.open(appstrings, "w") { |f| doc.write f }
 
-  version = {'major' => 0, 'minor' => 0, 'patch' => 0}
+  version = {'major' => 0, 'minor' => 0, 'patch' => 0, 'bugfix' => 0}
+  
   if $app_config["version"]
     if $app_config["version"] =~ /^(\d+)$/
       version["major"] = $1.to_i
@@ -147,15 +148,20 @@ def set_app_name_android(newname)
       version["major"] = $1.to_i
       version["minor"] = $2.to_i
       version["patch"] = $3.to_i
+	elsif $app_config["version"] =~ /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/
+      version["major"] = $1.to_i
+      version["minor"] = $2.to_i
+      version["patch"] = $3.to_i
+	  version["bugfix"] = $4.to_i
     end
   end
   
-  version = version["major"]*10000 + version["minor"]*100 + version["patch"]
+  version = version["major"]*100000 + version["minor"]*1000 + version["patch"]*10 + version["bugfix"]
 
   doc = REXML::Document.new(File.new($rhomanifest))
   doc.root.attributes['package'] = $app_package_name
   if version > 0
-    doc.root.attributes['android:versionCode'] = version.to_s
+    doc.root.attributes['android:versionCode'] = version.to_s()
     doc.root.attributes['android:versionName'] = $app_config["version"]
   end
 
