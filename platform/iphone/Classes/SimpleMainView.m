@@ -43,6 +43,8 @@
 #define RHO_TAG_TOOLBAR 2
 #define RHO_TAG_NAVBAR 3
 
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
 int rho_sys_get_screen_width();
 int rho_sys_get_screen_height();
 
@@ -366,7 +368,15 @@ static BOOL makeHiddenUntilLoadContent = YES;
     assert(webView && [webView retainCount] == 1);
     
 	CGRect wFrame = frame;
-    wFrame.origin.y = 0;
+    
+    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")){
+        wFrame.origin.y += 20;
+        wFrame.size.height -= 20;
+    }
+    else{
+        wFrame.origin.y = 0;
+    }
+    
     webView.frame = wFrame;
     
     webView.autoresizesSubviews = YES;
