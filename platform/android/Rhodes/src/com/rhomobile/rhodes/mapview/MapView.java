@@ -119,7 +119,7 @@ public class MapView extends BaseActivity implements MapTouch {
 	}
 
 	public static void create(long nativeDevice) {
-		RhodesActivity r = RhodesActivity.getInstance();
+		RhodesActivity r = RhodesActivity.safeGetInstance();
 		if (r == null) {
 			Logger.E(TAG, "Can't create map view because main activity is null");
 			return;

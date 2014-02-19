@@ -128,7 +128,7 @@ public class Camera {
 		
 		public void run() {
 			init();
-			RhodesActivity ra = RhodesActivity.getInstance();
+			RhodesActivity ra = RhodesActivity.safeGetInstance();
 			Intent intent = new Intent(ra, klass);
 			intent.putExtra(INTENT_EXTRA_PREFIX + "callback", url);
 			intent.putExtra(INTENT_EXTRA_PREFIX + "settings", settings);
@@ -140,7 +140,7 @@ public class Camera {
 		try {
 			Runnable runnable = Capabilities.CAMERA_ENABLED ? new Picture(url, ImageCapture.class, params_obj) :
 				new CameraDisabled(url);
-			PerformOnUiThread.exec(runnable, false);
+			PerformOnUiThread.exec(runnable);
 		}
 		catch (Exception e) {
 			reportFail("takePicture", e);
@@ -149,7 +149,7 @@ public class Camera {
 
 	public static void choosePicture(String url) {
 		try {
-			PerformOnUiThread.exec(new Picture(url, FileList.class, null), false);
+			PerformOnUiThread.exec(new Picture(url, FileList.class, null));
 		}
 		catch (Exception e) {
 			reportFail("choosePicture", e);

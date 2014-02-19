@@ -73,7 +73,7 @@ public class RhoBluetoothManager {
 	   
 	public static IRhoBluetoothManager sharedInstance() {
 		if (ourInstance == null) {
-			PerformOnUiThread.sync_exec( new Runnable() {
+			PerformOnUiThread.exec( new Runnable() {
 				public void run() {
 					RhoBluetoothManager.logi(TAG, "make IRhoBluetoothManager instance");
 					String className = "RhoBluetoothManagerNew";

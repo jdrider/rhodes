@@ -86,7 +86,7 @@ public class RhoBluetoothManagerNew implements IRhoBluetoothManager {
 	public void init() {
 		RhoBluetoothManager.logi(TAG, "init()");
 		// constructor
-		mActivity = RhodesActivity.getInstance();
+		mActivity = RhodesActivity.safeGetInstance();
 		mDeviceName = "NONAME";
 		
 		mInputBuffer = new byte[1024];

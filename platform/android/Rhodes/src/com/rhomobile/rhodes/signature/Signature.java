@@ -71,7 +71,7 @@ public class Signature {
 		
 		public void run() {
 			init();
-			RhodesActivity ra = RhodesActivity.getInstance();
+			RhodesActivity ra = RhodesActivity.safeGetInstance();
 			Intent intent = new Intent(ra, klass);
 			intent.putExtra(INTENT_EXTRA_PREFIX + "callback", url);
 			intent.putExtra(INTENT_EXTRA_PREFIX + "imageFormat", imageFormat);
@@ -115,7 +115,7 @@ public class Signature {
 			}
 			
 			Runnable runnable = new Picture(url, ImageCapture.class, imageFormat, penColor, penWidth, bgColor);
-			PerformOnUiThread.exec(runnable, false);
+			PerformOnUiThread.exec(runnable);
 		}
 		catch (Exception e) {
 			reportFail("takeSignature", e);

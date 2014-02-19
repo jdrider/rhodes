@@ -289,7 +289,7 @@ public class RhodesService extends Service {
         Logger.I("Rhodes", "Loading...");
         RhodesApplication.create();
 
-        RhodesActivity ra = RhodesActivity.getInstance();
+        RhodesActivity ra = RhodesActivity.safeGetInstance();
         if (ra != null) {
             // Show splash screen only if we have active activity
             SplashScreen splashScreen = ra.getSplashScreen();
@@ -504,7 +504,7 @@ public class RhodesService extends Service {
 	}
 	
 	public MainView getMainView() {
-		RhodesActivity ra = RhodesActivity.getInstance();
+		RhodesActivity ra = RhodesActivity.safeGetInstance();
 		if (ra == null)
 			return null;
 		return ra.getMainView();
@@ -1316,7 +1316,7 @@ public class RhodesService extends Service {
 	@Override
 	public void startActivity(Intent intent) {
 
-        RhodesActivity ra = RhodesActivity.getInstance();
+        RhodesActivity ra = RhodesActivity.safeGetInstance();
         if(intent.getComponent() != null && intent.getComponent().compareTo(new ComponentName(this, RhodesActivity.class.getName())) == 0) {
             Logger.T(TAG, "Start or bring main activity: " + RhodesActivity.class.getName() + ".");
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

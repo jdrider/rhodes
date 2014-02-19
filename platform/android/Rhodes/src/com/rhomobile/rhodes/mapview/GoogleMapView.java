@@ -115,7 +115,7 @@ public class GoogleMapView extends MapActivity {
 			public void run() {
 				mCalloutOverlay.selectAnnotation(fann);
 			}
-		}, false);
+		});
 	}
 
 	@Override
@@ -371,7 +371,7 @@ public class GoogleMapView extends MapActivity {
 						public void run() {
 							view.invalidate();
 						}
-					}, false);
+					});
 				}
 				else
 					anns.addElement(ann);
@@ -386,7 +386,7 @@ public class GoogleMapView extends MapActivity {
 			public void run() {
 				view.invalidate();
 			}
-		}, false);
+		});
 	}
 	
 	private class AddAnnotationsCommand implements Runnable {
@@ -407,7 +407,7 @@ public class GoogleMapView extends MapActivity {
 	
 	private void addAnnotationsInUIThread(AnnotationsOverlay overlay, Vector<Annotation> annotations, com.google.android.maps.MapView view) {
 		//Utils.platformLog(TAG, "perform add Annotations !");
-		PerformOnUiThread.exec(new AddAnnotationsCommand(overlay, annotations, view), false);
+		PerformOnUiThread.exec(new AddAnnotationsCommand(overlay, annotations, view));
 	}
 
 	@Override
@@ -546,7 +546,7 @@ public class GoogleMapView extends MapActivity {
 						mc = null;
 					}
 				}
-			}, false);
+			});
 		}
 		catch (Exception e) {
 			reportFail("close", e);

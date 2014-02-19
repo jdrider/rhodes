@@ -232,7 +232,7 @@ public class SplashScreen implements MainView {
 	@Override
 	public void back(int index) 
 	{
-        RhodesActivity ra = RhodesActivity.getInstance();
+        RhodesActivity ra = RhodesActivity.safeGetInstance();
         if ( ra != null )
             ra.moveTaskToBack(true);
 	}

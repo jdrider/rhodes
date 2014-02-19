@@ -583,7 +583,7 @@ public class SimpleMainView implements MainView {
             webView.goBack();
         else
         {    
-	        RhodesActivity ra = RhodesActivity.getInstance();
+	        RhodesActivity ra = RhodesActivity.safeGetInstance();
 	        if ( ra != null )
 	            ra.moveTaskToBack(true);
         }		

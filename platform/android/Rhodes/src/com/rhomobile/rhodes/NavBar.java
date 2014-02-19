@@ -81,7 +81,7 @@ public class NavBar {
 	
 	public static void create(Map<Object, Object> params) {
 		try {
-			PerformOnUiThread.exec(new CreateTask(params), false);
+			PerformOnUiThread.exec(new CreateTask(params));
 		}
 		catch (Exception e) {
 			reportFail("create", e);
@@ -90,7 +90,7 @@ public class NavBar {
 	
 	public static void remove() {
 		try {
-			PerformOnUiThread.exec(new RemoveTask(), false);
+			PerformOnUiThread.exec(new RemoveTask());
 		}
 		catch (Exception e) {
 			reportFail("remove", e);
