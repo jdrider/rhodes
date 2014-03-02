@@ -550,7 +550,7 @@ namespace "config" do
     $dx = File.join( $androidsdkpath, "platforms", $androidplatform, "tools", "dx" + $bat_ext )
     $dx = File.join( $androidsdkpath, "platform-tools", "dx" + $bat_ext ) unless File.exists? $dx
     $aapt = File.join( $androidsdkpath, "platforms", $androidplatform, "tools", "aapt" + $exe_ext )
-    $aapt = File.join( $androidsdkpath, "platform-tools", "aapt" + $exe_ext ) unless File.exists? $aapt
+    $aapt = File.join( $androidsdkpath, "build-tools/19.0.1", "aapt" + $exe_ext ) unless File.exists? $aapt
     $apkbuilder = File.join( $androidsdkpath, "tools", "apkbuilder" + $bat_ext )
     $androidbin = File.join( $androidsdkpath, "tools", "android" + $bat_ext )
     $adb = File.join( $androidsdkpath, "tools", "adb" + $exe_ext )

@@ -42,7 +42,7 @@ if RUBY_PLATFORM =~ /(win|w)32$/
 else
   $bat_ext = ""
   $exe_ext = ""
-  $ndkhost = `uname -s`.downcase!.chomp! + "-x86"
+  $ndkhost = `uname -s`.downcase!.chomp! + "-x86_64"
 end
 
 def num_cpus
@@ -71,7 +71,7 @@ def setup_ndk(ndkpath,apilevel)
   $ndktools = nil
   $ndkabi = "unknown"
   $ndkgccver = "unknown"
-  ["arm-linux-androideabi-4.4.3", "arm-eabi-4.4.0", "arm-eabi-4.2.1"].each do |abi|
+  ["arm-linux-androideabi-4.6", "arm-eabi-4.4.0", "arm-eabi-4.2.1"].each do |abi|
     variants = []
     variants << File.join(ndkpath, "toolchains", abi, "prebuilt", $ndkhost)
     variants << File.join(ndkpath, "build/prebuilt", $ndkhost, abi)
