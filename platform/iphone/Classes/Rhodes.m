@@ -619,6 +619,8 @@ static Rhodes *instance = NULL;
 	if (!is_splash_screen_maked) {
 		[window addSubview:mainView.view];
 	}
+    
+    window.rootViewController = mainView;
 	
     [window makeKeyAndVisible];
 

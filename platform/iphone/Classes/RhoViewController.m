@@ -35,4 +35,8 @@
 	return YES;
 }
 
+-(BOOL)shouldAutorotate{
+    return ![[Rhodes sharedInstance] isRotationLocked];
+}
+
 @end
