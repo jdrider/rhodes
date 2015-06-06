@@ -68,6 +68,8 @@ void rho_sys_impl_exit_with_errormessage(const char* szTitle, const char* szMsg)
 
 void rho_geoimpl_init();
 
+void rho_splash_screen_start();
+
 static BOOL app_created = NO;
 
 

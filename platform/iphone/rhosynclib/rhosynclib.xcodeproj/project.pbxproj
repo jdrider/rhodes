@@ -339,7 +339,7 @@
 				PRODUCT_NAME = rhosynclib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 i386 arm64";
 			};
 			name = Release;
 		};

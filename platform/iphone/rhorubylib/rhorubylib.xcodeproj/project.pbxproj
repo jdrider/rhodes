@@ -883,7 +883,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SYMROOT = ../build;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 i386 arm64";
 			};
 			name = Release;
 		};

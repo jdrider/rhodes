@@ -1117,7 +1117,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../shared/ruby/iphone ../shared/ruby/include ../shared/curl/include ../shared/ ../shared/syncengine ../shared/logging ../shared/common rhoextlib";
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 i386 arm64";
 			};
 			name = Release;
 		};
@@ -1233,7 +1233,7 @@
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "67c59ec6-28df-44a2-b28b-877b61730395";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67c59ec6-28df-44a2-b28b-877b61730395";
-				SDKROOT = iphonesimulator3.2;
+				SDKROOT = iphoneos;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 				SYMROOT = build;
 				USER_HEADER_SEARCH_PATHS = "../shared/ ../shared/syncengine ../shared/logging ../shared/common rhoextlib";

@@ -39,6 +39,8 @@
 
 static int started = 0;
 
+int rho_rhodesapp_check_mode();
+
 @interface RhoNativeBarCreateTask : NSObject {}
 + (void)run:(NSValue*)value :(NSDictionary*)parameters;
 @end

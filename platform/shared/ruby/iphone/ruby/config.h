@@ -19,19 +19,23 @@
 #define HAVE_OFF_T 1
 #define SIZEOF_INT 4
 #define SIZEOF_SHORT 2
-#ifdef RHODES_EMULATOR
+
+#ifdef __LP64__
 #define SIZEOF_LONG 8
 #else
 #define SIZEOF_LONG 4
 #endif
+
 #define SIZEOF_LONG_LONG 8
 #define SIZEOF___INT64 0
 #define SIZEOF_OFF_T 8
-#ifdef RHODES_EMULATOR
+
+#ifdef __LP64__
 #define SIZEOF_VOIDP 8
 #else
 #define SIZEOF_VOIDP 4
 #endif
+
 #define SIZEOF_FLOAT 4
 #define SIZEOF_DOUBLE 8
 #define SIZEOF_TIME_T 8
@@ -56,13 +60,13 @@
 #define NUM2DEVT(v) NUM2INT(v)
 #define PRI_DEVT_PREFIX ""
 #define HAVE_PROTOTYPES 1
-#define TOKEN_PASTE(x,y) x##y
+#define TOKEN_PASTE(x, y) x##y
 #define STRINGIZE(expr) STRINGIZE0(expr)
 #define HAVE_STDARG_PROTOTYPES 1
 #define HAVE_VA_ARGS_MACRO 1
-#define NORETURN(x) __attribute__ ((noreturn)) x
-#define DEPRECATED(x) __attribute__ ((deprecated)) x
-#define NOINLINE(x) __attribute__ ((noinline)) x
+#define NORETURN(x) __attribute__((noreturn)) x
+#define DEPRECATED(x) __attribute__((deprecated)) x
+#define NOINLINE(x) __attribute__((noinline)) x
 #define HAVE_DECL_SYS_NERR 1
 #define BROKEN_CRYPT 1
 #define HAVE_LIBDL 1
@@ -141,9 +145,9 @@
 #define HAVE_CRYPT 1
 #define HAVE_FLOCK 1
 #define HAVE_ISNAN 1
-//RHO
+// RHO
 //#define HAVE_FINITE 1
-//RHO
+// RHO
 #define HAVE_ISINF 1
 #define HAVE_HYPOT 1
 #define HAVE_ACOSH 1
@@ -229,7 +233,7 @@
 #define HAVE_SHUTDOWN 1
 #define HAVE_SIGALTSTACK 1
 #define RUBY_SETJMP(env) _setjmp(env)
-#define RUBY_LONGJMP(env,val) _longjmp(env,val)
+#define RUBY_LONGJMP(env, val) _longjmp(env, val)
 #define RUBY_JMP_BUF jmp_buf
 #define HAVE_STRUCT_TM_TM_ZONE 1
 #define HAVE_TM_ZONE 1
@@ -243,7 +247,7 @@
 #define POSIX_SIGNAL 1
 #define GETPGRP_VOID 1
 #define SETPGRP_VOID 1
-#define RSHIFT(x,y) ((x)>>(int)(y))
+#define RSHIFT(x, y) ((x) >> (int)(y))
 #define FILE_COUNT _r
 #define FILE_READPTR _p
 #define SIZEOF_STRUCT_STAT_ST_INO SIZEOF_LONG
@@ -262,20 +266,19 @@
 #define DLEXT_MAXLEN 7
 #define DLEXT ".bundle"
 #define HAVE_PTHREAD_H 1
-#define RUBY_LIB_VERSION_STYLE 3	/* full */
+#define RUBY_LIB_VERSION_STYLE 3 /* full */
 #define RUBY_EXEC_PREFIX "/usr/local"
-//RHO
-#define RUBY_LIB_PREFIX "" //RUBY_EXEC_PREFIX"/lib/ruby"
-//RHO
-#define RUBY_SITE_LIB RUBY_LIB_PREFIX"/site_ruby"
-#define RUBY_VENDOR_LIB RUBY_LIB_PREFIX"/vendor_ruby"
+// RHO
+#define RUBY_LIB_PREFIX "" // RUBY_EXEC_PREFIX"/lib/ruby"
+// RHO
+#define RUBY_SITE_LIB RUBY_LIB_PREFIX "/site_ruby"
+#define RUBY_VENDOR_LIB RUBY_LIB_PREFIX "/vendor_ruby"
 #define RUBY_PLATFORM "x86_64-darwin10.7.0"
 
-//RHO
+// RHO
 #define RUBY_EXPORT 1
 #define HAVE_GETADDRINFO 1
 #define HAVE_GETHOSTNAME 1
 #define HAVE_SOCKADDR_STORAGE 1
 #define LOAD_RELATIVE 1
-//RHO
-
+// RHO

@@ -70,7 +70,7 @@ VALUE __rhoGetDBDir(void)
     return rb_str_new2(rho_native_rhodbpath());
 }
 
-
+VALUE rb_str_chop_bang(VALUE str);
 
 #ifdef RHODES_EMULATOR
 VALUE __rhoGetRhodesDir(void)
