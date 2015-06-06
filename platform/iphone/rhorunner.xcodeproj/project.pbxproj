@@ -1060,8 +1060,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph Rider (E3TG52GG28)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph Rider (E3TG52GG28)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eagle Technology, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eagle Technology, Inc.";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1069,7 +1069,7 @@
 				GCC_PREFIX_HEADER = rhorunner_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1079,8 +1079,8 @@
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = rhorunner;
-				PROVISIONING_PROFILE = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
+				PROVISIONING_PROFILE = "67c59ec6-28df-44a2-b28b-877b61730395";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67c59ec6-28df-44a2-b28b-877b61730395";
 				SDKROOT = iphoneos;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1094,15 +1094,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph Rider (E3TG52GG28)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph Rider (E3TG52GG28)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eagle Technology, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eagle Technology, Inc.";
 				COPY_PHASE_STRIP = YES;
 				EXTENSIONS_LDFLAGS = "-filelist $(TARGET_TEMP_DIR)/rhodeslibs.txt";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = rhorunner_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1112,8 +1112,8 @@
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = rhorunner;
-				PROVISIONING_PROFILE = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
+				PROVISIONING_PROFILE = "67c59ec6-28df-44a2-b28b-877b61730395";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67c59ec6-28df-44a2-b28b-877b61730395";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../shared/ruby/iphone ../shared/ruby/include ../shared/curl/include ../shared/ ../shared/syncengine ../shared/logging ../shared/common rhoextlib";
@@ -1125,7 +1125,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph Rider (E3TG52GG28)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eagle Technology, Inc.";
 				EXTENSIONS_LDFLAGS = "-filelist $(TARGET_TEMP_DIR)/rhodeslibs.txt";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1156,7 +1156,7 @@
 					"$(EXTENSIONS_LDFLAGS)",
 				);
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67c59ec6-28df-44a2-b28b-877b61730395";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "../shared/ ../shared/syncengine ../shared/logging ../shared/common rhoextlib";
 			};
@@ -1167,14 +1167,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph Rider (E3TG52GG28)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph Rider (E3TG52GG28)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eagle Technology, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eagle Technology, Inc.";
 				COPY_PHASE_STRIP = YES;
 				EXTENSIONS_LDFLAGS = "-filelist $(TARGET_TEMP_DIR)/rhodeslibs.txt";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = rhorunner_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1196,8 +1196,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph Rider (E3TG52GG28)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph Rider (E3TG52GG28)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eagle Technology, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eagle Technology, Inc.";
 				EXTENSIONS_LDFLAGS = "-filelist $(TARGET_TEMP_DIR)/rhodeslibs.txt";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
@@ -1231,8 +1231,8 @@
 					"$(EXTENSIONS_LDFLAGS)",
 				);
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
+				PROVISIONING_PROFILE = "67c59ec6-28df-44a2-b28b-877b61730395";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67c59ec6-28df-44a2-b28b-877b61730395";
 				SDKROOT = iphonesimulator3.2;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 				SYMROOT = build;
@@ -1243,7 +1243,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph Rider (E3TG52GG28)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eagle Technology, Inc.";
 				EXTENSIONS_LDFLAGS = "-filelist $(TARGET_TEMP_DIR)/rhodeslibs.txt";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1274,7 +1274,7 @@
 					"$(EXTENSIONS_LDFLAGS)",
 				);
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e2f94db5-9f3d-42cf-b1e2-0a8ffeecdda5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67c59ec6-28df-44a2-b28b-877b61730395";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "../shared/ ../shared/syncengine ../shared/logging ../shared/common rhoextlib";
 			};
